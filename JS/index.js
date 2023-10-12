@@ -5,15 +5,18 @@ function randomNumber(){
 
 let playerR;
 let cpuR;
-function rollP(){ /* this does a random roll for player */
-    if (randomNumber() == 1 ){
-        playerR =("rock");
-    } else if (randomNumber() == 2){
-        playerR=("paper")
-    } else {
-        playerR=("scissors")
-    }
-   return;
+let cpuW = 0;
+let playerW = 0;
+let timeT = 0;
+let gameT
+function rollR(){
+    playerR =("rock");
+}
+function rollP(){
+playerR=("paper");
+}
+function rollS(){
+    playerR=("scissors")
 }
 function rollC(){ /*  this rolls for "CPU" on roll button */
     if (randomNumber() == 1 ){
@@ -25,22 +28,40 @@ function rollC(){ /*  this rolls for "CPU" on roll button */
     }
    
 }
-
 function result(){
 if(cpuR == "rock" && playerR == "paper"){
-    alert("PLAYER WINS");
+    alert("PLAYER WINS, cpu rock player paper");
+    playerW++;
+    gameT++;
 } else if(cpuR == "rock" && playerR == "scissors"){
-    alert("CPU WINS")
+    alert("CPU WINS, cpu rock player scissors")
+    cpuW++;
+    gameT++;
 } else if(cpuR == "paper" && playerR == "rock"){
-    alert("CPU WINS")
+    alert("CPU WINS cpu paper player rock")
+    cpuW++;
+    gameT++;
 }else if(cpuR == "paper" && playerR == "scissors"){
-    alert("PLAYER WINS")
+    alert("PLAYER WINS cpu paper player scissors")
+    playerW++;
+    gameT++;
 }else if(cpuR == "scissors" && playerR == "rock"){
-    alert("PLAYER WINS")
+    alert("PLAYER WINS cpu scissors player rock")
+    playerW++
+    gameT++;
 }else if(cpuR == "scissors" && playerR == "paper"){
-    alert("CPU WINS")
+    alert("CPU WINS cpu scissors player paper")
+    cpuW++
+    gameT++;
 } else{
-    alert("TIE")
+    alert("TIE you both chose the same!")
+    timeT++;
+    gameT++;
 }
 }
-
+let numW;
+function wins(){
+    let numW = "player wins: "+ playerW + " cpu wins: "+ cpuW +
+    " Total Ties: "+ timeT + " total games: "+ gameT;
+    
+}
