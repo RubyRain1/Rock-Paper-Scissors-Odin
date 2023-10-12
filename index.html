@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="/CSS/style.css">
     <title>Document</title>
 </head>
-<body>
-    
-    <button onclick="rollR(), rollC(), result()">Rock</button>
-    <button onclick="rollP(), rollC(), result()">Paper</button>
-    <button onclick="rollS(), rollC(), result()">Scissors</button>
-    <p onload="wins()"> I need to replace this text</p>
+<body onclick="wins(),statusG()" onload="wins()">
+    <div class="buttonP">
+        <button onclick="rollR(), rollC(), result()"><img class="imgB"src="/images/rock.jpg"></button>
+        <button onclick="rollP(), rollC(), result()"><img class="imgB" src="/images/paper.jpg"></button>
+        <button onclick="rollS(), rollC(), result()"><img class="imgB" src="/images/scissors.jpg"></button>
+    </div>
+    <div class="parP">
+        <p id="statusN">Game Status</p>
+        <p id="winN"></p>
+    </div>
 </body>
 <script src="/JS/index.js"></script>
 </html>

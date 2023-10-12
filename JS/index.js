@@ -8,12 +8,13 @@ let cpuR;
 let cpuW = 0;
 let playerW = 0;
 let timeT = 0;
-let gameT
+let gameT = 0;
+let status = ""; /* this is what will show what moves the player and cpu do as well as show who wins */
 function rollR(){
     playerR =("rock");
 }
 function rollP(){
-playerR=("paper");
+    playerR=("paper");
 }
 function rollS(){
     playerR=("scissors")
@@ -30,38 +31,41 @@ function rollC(){ /*  this rolls for "CPU" on roll button */
 }
 function result(){
 if(cpuR == "rock" && playerR == "paper"){
-    alert("PLAYER WINS, cpu rock player paper");
+    status = ("PLAYER WINS, cpu rock player paper");
     playerW++;
     gameT++;
 } else if(cpuR == "rock" && playerR == "scissors"){
-    alert("CPU WINS, cpu rock player scissors")
+    status=("CPU WINS, cpu rock player scissors")
     cpuW++;
     gameT++;
 } else if(cpuR == "paper" && playerR == "rock"){
-    alert("CPU WINS cpu paper player rock")
+    status=("CPU WINS cpu paper player rock")
     cpuW++;
     gameT++;
 }else if(cpuR == "paper" && playerR == "scissors"){
-    alert("PLAYER WINS cpu paper player scissors")
+    status=("PLAYER WINS cpu paper player scissors")
     playerW++;
     gameT++;
 }else if(cpuR == "scissors" && playerR == "rock"){
-    alert("PLAYER WINS cpu scissors player rock")
+    status=("PLAYER WINS cpu scissors player rock")
     playerW++
     gameT++;
 }else if(cpuR == "scissors" && playerR == "paper"){
-    alert("CPU WINS cpu scissors player paper")
+    status=("CPU WINS cpu scissors player paper")
     cpuW++
     gameT++;
 } else{
-    alert("TIE you both chose the same!")
+    status=("TIE you both chose the same!")
     timeT++;
     gameT++;
 }
 }
-let numW;
+function statusG(){
+    document.getElementById("statusN").innerHTML = (status);
+}
+
 function wins(){
-    let numW = "player wins: "+ playerW + " cpu wins: "+ cpuW +
-    " Total Ties: "+ timeT + " total games: "+ gameT;
+    document.getElementById("winN").innerHTML =( "player wins: "+ playerW + " cpu wins: "+ cpuW +
+    " Total Ties: "+ timeT + " total games: "+ gameT); /* for some reason this actually replaces the text in p with id "winN" on load  */
     
 }

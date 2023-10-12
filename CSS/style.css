@@ -1,3 +1,19 @@
 body{
     background-color:#3d354b;
+    color: blanchedalmond;
+    font-family: cursive;
+}
+.imgB{
+    width: 100px;
+    height: 100px;
+}
+#statusN,#winN{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonP{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
