@@ -10,6 +10,7 @@ let playerW = 0;
 let timeT = 0;
 let gameT = 0;
 let status = ""; /* this is what will show what moves the player and cpu do as well as show who wins */
+
 function rollR(){
     playerR =("rock");
 }
