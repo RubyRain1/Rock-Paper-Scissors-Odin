@@ -11,6 +11,7 @@ let timeT = 0;
 let gameT = 0;
 let status = ""; /* this is what will show what moves the player and cpu do as well as show who wins */
 
+
 function rollR(){
     playerR =("rock");
 }
@@ -21,15 +22,16 @@ function rollS(){
     playerR=("scissors")
 }
 function rollC(){ /*  this rolls for "CPU" on roll button */
-    if (randomNumber() == 1 ){
+    let roll = randomNumber();
+    if (roll == 1 ){
         cpuR=("rock");
-    } else if (randomNumber() == 2){
+    } else if (roll == 2){
         cpuR=("paper")
     } else {
         cpuR=("scissors")
-    }
-   
+    } 
 }
+
 function result(){
 if(cpuR == "rock" && playerR == "paper"){
     status = ("PLAYER WINS, cpu rock player paper");
@@ -61,12 +63,13 @@ if(cpuR == "rock" && playerR == "paper"){
     gameT++;
 }
 }
+
 function statusG(){
     document.getElementById("statusN").innerHTML = (status);
 }
 
 function wins(){
-    document.getElementById("winN").innerHTML =( "player wins: "+ playerW + " cpu wins: "+ cpuW +
-    " Total Ties: "+ timeT + " total games: "+ gameT); /* for some reason this actually replaces the text in p with id "winN" on load  */
+    document.getElementById("winN").innerHTML =("player wins: "+ playerW + "\ncpu wins: "+ cpuW +
+    "\nTotal Ties: "+ timeT + "\ntotal games: "+ gameT); /* for some reason this actually replaces the text in p with id "winN" on load  */
     
 }

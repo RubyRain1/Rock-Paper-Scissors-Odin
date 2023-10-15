@@ -1,11 +1,13 @@
 body{
-    background-color:#3d354b;
-    color: blanchedalmond;
+    background-color: #272626; /*  */
+    color:white;
     font-family: cursive;
+    margin: 0;
 }
 .imgB{
     width: 100px;
     height: 100px;
+    
 }
 #statusN,#winN{
     display: flex;
@@ -16,4 +18,31 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 80px;
+    padding: 10px;
+}
+.header{
+    background-color: #95130C;/* #DAA520 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    
+}
+.bottom{
+    background-color: pink;
+}
+.footer{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.headerT{
+    font-size: 50px;
+    color: #DAA520;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+}
+.parP{
+    font-size: 40px;
 }
